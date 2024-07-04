@@ -4,58 +4,58 @@
 	position: absolute;
 }
 
-#map .ol-zoom-out{
+#map .ol-zoom-out {
 	margin-top: 245px;
 }
 
-#map .ol-zoomslider{
+#map .ol-zoomslider {
 	background-color: transparent;
 	top: 70px;
 	z-index: 999;
 }
 
-#map .ol-zoom-extent{
+#map .ol-zoom-extent {
 	margin-top: 230px;
 }
-
-#mouse-position{
+/* //鹰眼 */
+#mouse-position {
 	position: absolute;
 	background-color: #FFFFFF;
 	bottom: 0px;
 	right: 2px;
 	width: 200px;
 	height: 20px;
-	z-index: 2000;	//鹰眼
+	z-index: 2000;
 }
-
-.custom-mouse-position{
+/* //经纬度 */
+.custom-mouse-position {
 	color: rgb(0, 0, 0);
 	font-size: 16px;
-	font-family: "微软雅黑";	//经纬度
+	font-family: "微软雅黑"; 
+}
+/* //比例尺 */
+#map .ol-scale-line {
+	left: 175px; 
 }
 
-#map .ol-scale-line{
-	left: 175px;	//比例尺
-}
-
-.ToolLib{
-	/* /* 圆角半径 */ */
+.ToolLib {
+	/* /* 圆角半径 */
 	border-radius: 3px;
 	overflow: hidden;
 	width: 100%;
-	height:auto;
-	box-shadow:  0 0 2px 1px #949292;
+	height: auto;
+	box-shadow: 0 0 2px 1px #949292;
 	text-align: center;
 	z-index: 2001;
-	border-color:#66ccff ;
+	border-color: #66ccff;
 	border-bottom: 1px solid #949292;
-	margain-top:2px;
+	margain-top: 2px;
 }
 
-.ButtonLib{
-	color:#0075c7;
-	display:inlinelock;
-	padding:3px 5px;
+.ButtonLib {
+	color: #0075c7;
+	display: inlinelock;
+	padding: 3px 5px;
 	margin-top: 4px;
 	margin-bottom: 4px;
 	margin-left: 4px;
@@ -66,80 +66,90 @@
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
-	border:1px solid transparent;
+	border: 1px solid transparent;
 	border-color: #0075c7;
-	border-radius:3px;
+	border-radius: 3px;
 	background-image: none;
 	background-color: transparent;
-	
+
 }
 
-.ButtonLib:hover{
+.ButtonLib:hover {
 	color: white;
 	background-color: #0075c7;
 }
 
-.layerControl{
+.layerControl {
 	position: absolute;
-	bottom: 5px;
 	min-width: 200px;
-	max-height: 200px;
+	height: auto !important;
+	height: 200px;
+	min-height: 200px;
 	right: 0px;
 	top: 5px;
 	z-index: 2001;
 	color: #FFFFFF;
 	background-color: #4C4E5A;
 	border-width: 10px;
+	padding-bottom: 12px;
 	border-radius: 10px;
 	border-color: #000 #0000 #000;
 }
 
-.layerControl .title{
+.layerControl .title {
 	font-weight: bold;
 	font-size: 15px;
 	margin: 10px;
 }
 
-.layerTree li{
+.layerTree li {
 	list-style: none;
 	margin: 5px 10px;
 }
 
-.layerItem{
+.layerItem {
 	width: 100px;
 	height: 15px;
 	box-shadow: 0px 0px 5px #888;
 }
 
 /*弹出框样式*/
-.ol-popup{
+.ol-popup {
 	position: absolute;
 	background-color: #EEEEEE;
 	padding: 15px;
-	border:1px solid #cccccc;
-	bottom:12px;
-	left:-50px;
+	border: 1px solid #cccccc;
+	bottom: 12px;
+	left: -50px;
 	min-width: 280px;
 }
 
-.ol-popup:after{
-	top:100%;
-	border:solid transparent;
+.ol-popup:after {
+	top: 100%;
+	border: solid transparent;
 	content: " ";
-	position:absolute;
-	pointer-events:none;
-	border-top-color:#EEEEEE;
-	border-width:10px;
-	left:38px;
+	position: absolute;
+	pointer-events: none;
+	border-top-color: #EEEEEE;
+	border-width: 10px;
+	left: 38px;
 }
 
-.ol-popup-closer{
-	text-decoration:none;
+.ol-popup-closer {
+	text-decoration: none;
 	position: absolute;
-	top:2px;
-	right:8px;
+	top: 2px;
+	right: 8px;
 }
-body,html,div,ul,li,iframe,p,img{
+
+body,
+html,
+div,
+ul,
+li,
+iframe,
+p,
+img {
 	border: none;
 	padding: 0;
 	margin: 0;
@@ -151,93 +161,102 @@ body,html,div,ul,li,iframe,p,img{
 
 /* 顶部标题栏 */
 .map-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #0073e6; /* 示例的背景颜色 */
-    color: white;
-    font-size: 36px;
-    text-align: center;
-    padding: 10px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #0073e6;
+	/* 示例的背景颜色 */
+	color: white;
+	font-size: 36px;
+	text-align: center;
+	padding: 10px 0;
 	z-index: 99;
 }
 
 /* 左侧菜单栏 */
 .map-left {
-    position: absolute;
-    top: 100px;
-    left: 20px;
-    width: 300px;
-    height: calc(100% - 100px);
-    background-color: rgba(7, 95, 204, 0.5); /* 示例的背景颜色和透明度 */
-    z-index: 99;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 根据需要调整 */
-    padding-top: 20px;
+	position: absolute;
+	top: 100px;
+	left: 20px;
+	width: 300px;
+	height: calc(100% - 100px);
+	background-color: rgba(7, 95, 204, 0.5);
+	/* 示例的背景颜色和透明度 */
+	z-index: 99;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* 根据需要调整 */
+	padding-top: 20px;
 }
 
 .map-menu-item {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #005da6; /* 示例的菜单项背景颜色 */
-    color: white;
-    cursor: pointer;
-    text-align: center;
-    width: 90%; /* 根据需要调整 */
+	margin-bottom: 10px;
+	padding: 10px;
+	background-color: #005da6;
+	/* 示例的菜单项背景颜色 */
+	color: white;
+	cursor: pointer;
+	text-align: center;
+	width: 90%;
+	/* 根据需要调整 */
 }
 
 .map-menu-item:hover {
-    background-color: #004c8b; /* 悬停时的较深颜色 */
+	background-color: #004c8b;
+	/* 悬停时的较深颜色 */
 }
 
 /* 右侧列表框 */
 .map-right {
-    position: absolute;
-    /* top: 100px; /* 与左侧菜单栏的顶部对齐 */ 
-    right: 10px;
+	position: absolute;
+	/* top: 100px; /* 与左侧菜单栏的顶部对齐 */
+	right: 10px;
 	bottom: 0px;
-    width: 800px; /* 根据左侧菜单栏的宽度调整 */
-    height:180px;
-    background-color: #f0f0f0; /* 示例的背景颜色 */
-    z-index: 99;
-    overflow: auto;
-    padding: 20px;
+	width: 800px;
+	/* 根据左侧菜单栏的宽度调整 */
+	height: 180px;
+	background-color: #f0f0f0;
+	/* 示例的背景颜色 */
+	z-index: 99;
+	overflow: auto;
+	padding: 20px;
 	opacity: 0.8;
 }
 
 /* 表格样式 */
 .info-table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
 }
 
 .info-table th,
 .info-table td {
-    padding: 8px;
-    border: 1px solid #ddd; /* 示例的边框颜色 */
-    text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+	padding: 8px;
+	border: 1px solid #ddd;
+	/* 示例的边框颜色 */
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .info-table th {
-    background-color: #f2f2f2; /* 示例的表头背景颜色 */
+	background-color: #f2f2f2;
+	/* 示例的表头背景颜色 */
 }
 
 /* 鼠标位置显示 */
 #mouse-position {
-    position: absolute;
-    bottom: 220px;
-    right: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    z-index: 999;
+	position: absolute;
+	bottom: 220px;
+	right: 20px;
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	z-index: 999;
 	opacity: 0.4;
 	text-align: center;
 }
-

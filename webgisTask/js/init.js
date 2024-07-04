@@ -13,10 +13,10 @@ function mapinit(id) {
 		
 		view: new ol.View({
 			projection:projection,
-			center: ([113.821841,22.281847]),
+			center: ([120.16,30.17]),
 			maxZoom:15,
 			minZoom:7,
-			zoom: 5,
+			zoom: 14,
 		})
 	})
 	var tdtimglayer = new ol.layer.Tile({

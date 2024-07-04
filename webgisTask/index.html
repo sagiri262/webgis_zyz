@@ -82,11 +82,11 @@
 
 			var geojsonRescueSource = new ol.source.Vector({
 				format: new ol.format.GeoJSON(),
-				url: './data/历史内涝点.geojson'
+				url: './data/城市洼地.geojson'
 			})
 
 			var geojsonRescueLayer = new ol.layer.Vector({
-				title: '历史内涝点',
+				title: '城市洼地',
 				source: geojsonRescueSource,
 				style: function(feature) {
 					return creature(feature)
@@ -100,11 +100,13 @@
 			// 批量添加图层
 			// 数据源和标题的数组
 			var dataSources = [
-				{ url: './data/城市洼地.geojson', title: '城市洼地' },
 				{ url: './data/救援队.geojson', title: '救援队' },
-				{ url: './data/救援仓库物资仓储点.geojson', title: '救援仓库物资仓储点' },
+				
+				{ url: './data/救援物资仓储点.geojson', title: '救援物资仓储点' },
+				{ url: './data/历史内涝点.geojson', title: '历史内涝点' },
 				{ url: './data/历史内涝区域.geojson', title: '历史内涝区域' },
-				{ url: './data/住宅地下空间.geojson', title: '住宅地下空间' }
+				{ url: './data/住宅地下空间.geojson', title: '住宅地下空间' },
+				
 			];
 
 			dataSources.forEach(function(dataSource) {
