@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "救援物资仓储点",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4490" } },
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 1, "bh": "1", "wzkmc": "滨江区迎春南苑应急物资储备仓库", "ssdw": "滨江区人民政府", "wzkdz": "杭州市滨江区西兴街道迎春", "wzdj": "区县级", "fzrxm": "章**", "fzrlxfs": "1356719****" }, "geometry": { "type": "Point", "coordinates": [ 120.218696898584682, 30.195631940613357 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 2, "bh": "2", "wzkmc": "滨江区冠山森林消防仓库", "ssdw": "杭州市规划和自然资源局滨江分局", "wzkdz": "杭州市滨江区长河街道冠山公园", "wzdj": "区县级", "fzrxm": "倪*", "fzrlxfs": "1866717****" }, "geometry": { "type": "Point", "coordinates": [ 120.181113711169175, 30.173476627357296 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 3, "bh": "3", "wzkmc": "杭州滨城供销超市有限公司救灾物质", "ssdw": "滨江区供销社", "wzkdz": "杭州市滨江区长河街道章苏村", "wzdj": "区县级", "fzrxm": "来**", "fzrlxfs": "13867167***" }, "geometry": { "type": "Point", "coordinates": [ 120.192925356188127, 30.171607323017632 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 4, "bh": "4", "wzkmc": "滨江区救灾物资储备仓库", "ssdw": "滨江区应急管理局", "wzkdz": "杭州市滨江区长河街道阳光家园", "wzdj": "区县级", "fzrxm": "孙**", "fzrlxfs": "1358817****" }, "geometry": { "type": "Point", "coordinates": [ 120.190600019666277, 30.157004253438885 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 5, "bh": "5", "wzkmc": "滨江区滨江公园桥下空间物资储备仓", "ssdw": "滨江区人民政府", "wzkdz": "杭州市滨江区长河街道滨江公园", "wzdj": "区县级", "fzrxm": "杨**", "fzrlxfs": "1357570****" }, "geometry": { "type": "Point", "coordinates": [ 120.196983067226057, 30.211663454698272 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 6, "bh": "6", "wzkmc": "滨江区防汛抗雪应急抢险队伍仓库", "ssdw": "杭州市申佳物业管理有限公司", "wzkdz": "杭州市滨江区西兴街道白马湖小区白鹤苑", "wzdj": "区县级", "fzrxm": "孙**", "fzrlxfs": "1396018****" }, "geometry": { "type": "Point", "coordinates": [ 120.206710411119616, 30.168630483629038 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 7, "bh": "7", "wzkmc": "滨江区防汛抗雪应急抢险队伍", "ssdw": "浙江创昊市政园林有限公司", "wzkdz": "杭州市滨江区长河街道冠山小区", "wzdj": "区县级", "fzrxm": "方*", "fzrlxfs": "136165*****" }, "geometry": { "type": "Point", "coordinates": [ 120.198144859590514, 30.167111435438898 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 8, "bh": "8", "wzkmc": "滨江区防汛抗雪应急抢险队伍", "ssdw": "浙江腾虎市政园林工程有限公司", "wzkdz": "杭州市滨江区浦沿街道南环路2952号", "wzdj": "区县级", "fzrxm": "来**", "fzrlxfs": "1395813****" }, "geometry": { "type": "Point", "coordinates": [ 120.168438335282886, 30.180410626339718 ] } }
+]
+}

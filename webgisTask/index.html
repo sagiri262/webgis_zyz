@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>task</title>
+		<script src="package/ol.js"></script>
+		<link rel="stylesheet" type="text/css" href="package/ol.css">
+		<script src="js/mapUtils.js"></script>
+		<script src="js/init.js"></script>
+		<!-- <link rel="stylesheet" type="text/css" href="css/styleut.css" /> -->
+		<link rel="stylesheet" type="text/css" href="css/map.css" />
+	</head>
+	<body>
+		<div id="map" class="map" style="padding: 5px;">
+			<!-- 顶部标题栏 -->
+			<div class="map-top" style="text-align: left;">
+				城市内涝普查数据展示系统
+			</div>
+
+			<!-- 左侧菜单栏 -->
+			<div class="map-left">
+				<!-- 菜单项 -->
+				<div class="map-menu-item" onclick="changeTableInfo(layerArr[0])">城市洼地</div>
+				<div class="map-menu-item" onclick="changeTableInfo(layerArr[1])">救援队</div>
+				<div class="map-menu-item" onclick="changeTableInfo(layerArr[2])">救援仓库物资仓储点</div>
+				<div class="map-menu-item" onclick="changeTableInfo(layerArr[3])">历史内涝点</div>
+				<div class="map-menu-item" onclick="changeTableInfo(layerArr[4])">历史内涝区域</div>
+				<div class="map-menu-item" onclick="changeTableInfo(layerArr[5])">住宅地下空间</div>
+			</div>
+
+			<!-- 右侧列表框 -->
+			<div class="map-right">
+				<table class="info-table" cellspacing="0" id="table">
+					<!-- 表格内容将动态填充 -->
+				</table>
+			</div>
+
+
+			<div id="layerControl" class="layerControl">
+				<div class="title"><label>图层列表</label>
+				</div>
+				<ul id="layerTree" class="layerTree">
+
+				</ul>
+			</div>
+
+			<!-- 鼠标位置显示 -->
+			<div id="mouse-position"></div>
+		</div>
+
+		<script>
+			var map = mapinit('map') //矢量化地图控件
+
+
+			function creature(feature) {
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+						anchor: [0.5, 60],
+						anchorOrigin: 'top-right',
+						anchorXUnits: 'fraction',
+						anchorYUnits: 'pixels',
+						scale: 0.1,
+						opacity: 0.75,
+						src: 'img/cinema.png'
+					}),
+					text: new ol.style.Text({
+						txetAlign: 'center',
+						textBaseline: 'bottom',
+						text: feature.get('name'),
+						font: '16px 仿宋',
+						fill: new ol.style.Fill({
+							color: "#aa3300"
+						}),
+						stroke: new ol.style.Stroke({
+							color: "#ffcc33",
+							width: 2
+						})
+					})
+				})
+				return style;
+			}
+
+			var geojsonRescueSource = new ol.source.Vector({
+				format: new ol.format.GeoJSON(),
+				url: './data/历史内涝点.geojson'
+			})
+
+			var geojsonRescueLayer = new ol.layer.Vector({
+				title: '历史内涝点',
+				source: geojsonRescueSource,
+				style: function(feature) {
+					return creature(feature)
+				}
+			})
+			geojsonRescueLayer.setVisible(true)
+
+			map.addLayer(geojsonRescueLayer)	
+
+			var layerArr = [geojsonRescueLayer]
+			// 批量添加图层
+			// 数据源和标题的数组
+			var dataSources = [
+				{ url: './data/城市洼地.geojson', title: '城市洼地' },
+				{ url: './data/救援队.geojson', title: '救援队' },
+				{ url: './data/救援仓库物资仓储点.geojson', title: '救援仓库物资仓储点' },
+				{ url: './data/历史内涝区域.geojson', title: '历史内涝区域' },
+				{ url: './data/住宅地下空间.geojson', title: '住宅地下空间' }
+			];
+
+			dataSources.forEach(function(dataSource) {
+				var vectorSource = new ol.source.Vector({
+					format: new ol.format.GeoJSON(),
+					url: dataSource.url
+				});
+
+				var vectorLayer = new ol.layer.Vector({
+					title: dataSource.title,
+					source: vectorSource,
+				
+				});
+				layerArr.push(vectorLayer)
+				vectorLayer.setVisible(false); // 设置为不可见
+				map.addLayer(vectorLayer);
+			});
+
+
+
+			function changeTableInfo(numFeatures) {
+				// 先清空表格内容
+				let table = document.getElementById('table');
+				table.innerHTML = "";
+
+				// 获取图层的数据源
+				var source = numFeatures.getSource();
+
+				// 获取数据源中加载的所有要素（features）
+				var features = source.getFeatures();
+
+				// 如果没有要素，则返回
+				if (features.length === 0) {
+					return;
+				}
+
+				// 获取第一个要素的属性
+				var firstFeatureProperties = features[0].getProperties();
+
+				// 创建表头行
+				var thead = document.createElement("thead");
+				var thTr = document.createElement("tr");
+
+				// 创建表头单元格并设置内容
+				for (var key in firstFeatureProperties) {
+					if (firstFeatureProperties.hasOwnProperty(key)) {
+						var th = document.createElement('th');
+						th.textContent = key;
+						thTr.appendChild(th);
+					}
+				}
+
+				// 将表头行添加到表头中
+				thead.appendChild(thTr);
+
+				// 将表头添加到表格中
+				table.appendChild(thead);
+
+				// 创建表格内容部分
+				var tbody = document.createElement("tbody");
+
+				// 遍历所有要素
+				features.forEach(function(feature) {
+					// 获取要素的属性数据
+					var properties = feature.getProperties();
+
+					// 创建新的行
+					var tr = document.createElement("tr");
+
+					// 创建并填充单元格
+					for (var key in properties) {
+						if (properties.hasOwnProperty(key)) {
+							var td = document.createElement("td");
+							td.textContent = properties[key];
+							tr.appendChild(td);
+						}
+					}
+
+					// 将行添加到 tbody 中
+					tbody.appendChild(tr);
+				});
+
+				// 将 tbody 添加到表格中
+				table.appendChild(tbody);
+			}
+
+
+			loadLayerControl(map, "layerTree")
+		</script>
+	</body>
+</html>

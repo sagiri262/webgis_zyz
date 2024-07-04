@@ -1,0 +1,16 @@
+{
+"type": "FeatureCollection",
+"name": "救援队",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4490" } },
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 1, "bh": "1", "dwmc": "三联公益救援服务中心", "dwlb": "民间", "dwdz": "杭州市滨江区西兴街道春南苑", "dwjb": "区县级", "qxlb": "综合抢险", "ryzs": "50", "dzxm": "吴**", "dzsjhm": "1800681****", "zbdh": "1875811****", "ytdw": "滨江区应急管理局" }, "geometry": { "type": "Point", "coordinates": [ 120.217077913150945, 30.198511564735526 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 2, "bh": "2", "dwmc": "聿蓝应急救援队", "dwlb": "民间", "dwdz": "杭州市滨江区长河街道白马湖", "dwjb": "区县级", "qxlb": "综合抢险", "ryzs": "50", "dzxm": "徐**", "dzsjhm": "1826716****", "zbdh": "1981717****", "ytdw": "滨江区应急管理局" }, "geometry": { "type": "Point", "coordinates": [ 120.197906405150945, 30.165959776735491 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 3, "bh": "3", "dwmc": "红十字海豹救援队", "dwlb": "民间", "dwdz": "杭州市滨江区长河街道闻涛路", "dwjb": "区县级", "qxlb": "综合抢险", "ryzs": "10", "dzxm": "侯**", "dzsjhm": "1885737****", "zbdh": "1885737****", "ytdw": "滨江区红十字会" }, "geometry": { "type": "Point", "coordinates": [ 120.175707049189512, 30.199869633755831 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 4, "bh": "4", "dwmc": "海豹救援队", "dwlb": "民间", "dwdz": "杭州市滨江区长河街道闻涛路", "dwjb": "区县级", "qxlb": "综合抢险", "ryzs": "10", "dzxm": "侯**", "dzsjhm": "1885737****", "zbdh": "1885737****", "ytdw": "滨江区红十字会" }, "geometry": { "type": "Point", "coordinates": [ 120.175707049189512, 30.199869633755831 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 5, "bh": "5", "dwmc": "公羊会应急救援大队", "dwlb": "民间", "dwdz": "杭州市滨江区长河街道滨康路", "dwjb": "区县级", "qxlb": "综合抢险", "ryzs": "10", "dzxm": "郑**", "dzsjhm": "1537258****", "zbdh": "17357056***", "ytdw": "滨江区应急管理局" }, "geometry": { "type": "Point", "coordinates": [ 120.179560348150915, 30.18549583373553 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 6, "bh": "6", "dwmc": "浦沿街道森林消防队", "dwlb": "国有", "dwdz": "杭州市滨江区浦沿街道西浦路", "dwjb": "街道级", "qxlb": "综合抢险", "ryzs": "55", "dzxm": "褚**", "dzsjhm": "13967147***", "zbdh": "8661****", "ytdw": "浦沿街道办事处" }, "geometry": { "type": "Point", "coordinates": [ 120.136510125151588, 30.162565780357948 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 7, "bh": "7", "dwmc": "滨江区防汛抗雪应急抢险队伍1", "dwlb": "民间", "dwdz": "杭州市滨江区长河街道冠山小区", "dwjb": "区县级", "qxlb": "其他（防汛、抗雪）", "ryzs": "45", "dzxm": "方*", "dzsjhm": "1361653****", "zbdh": "1361653****", "ytdw": "浙江创政园林有限公司" }, "geometry": { "type": "Point", "coordinates": [ 120.194266338150953, 30.161662469735489 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 8, "bh": "8", "dwmc": "滨江区防汛抗雪应急抢险队伍2", "dwlb": "民间", "dwdz": "杭州市滨江区浦沿街道南环路", "dwjb": "区县级", "qxlb": "其他（防汛、抗雪）", "ryzs": "20", "dzxm": "来**", "dzsjhm": "1395813****", "zbdh": "1395813****", "ytdw": "浙江腾政园林工程有限公司" }, "geometry": { "type": "Point", "coordinates": [ 120.167653113150948, 30.182766292735522 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 9, "bh": "9", "dwmc": "滨江区防汛抗雪应急抢险队伍3", "dwlb": "民间", "dwdz": "杭州市滨江区西兴街道白马湖小区", "dwjb": "区县级", "qxlb": "其他（防汛、抗雪）", "ryzs": "35", "dzxm": "孙**", "dzsjhm": "1396018****", "zbdh": "1396018****", "ytdw": "杭州市申物业管理有限公司" }, "geometry": { "type": "Point", "coordinates": [ 120.204473717774107, 30.172390032018299 ] } }
+]
+}
